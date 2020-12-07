@@ -896,12 +896,12 @@ var isNode = function () {
                     return self;
                 },
                 ignoreLessLess: function () {
-                    tolerance.red = 1;
-                    tolerance.green = 1;
-                    tolerance.blue = 1;
-                    tolerance.alpha = 1;
-                    tolerance.minBrightness = 1;
-                    tolerance.maxBrightness = 254;
+                    tolerance.red = 5;
+                    tolerance.green = 5;
+                    tolerance.blue = 5;
+                    tolerance.alpha = 5;
+                    tolerance.minBrightness = 5;
+                    tolerance.maxBrightness = 250;
 
                     ignoreAntialiasing = false;
                     ignoreColors = false;
