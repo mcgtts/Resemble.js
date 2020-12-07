@@ -895,6 +895,22 @@ var isNode = function () {
                     }
                     return self;
                 },
+                ignoreLessLess: function () {
+                    tolerance.red = 1;
+                    tolerance.green = 1;
+                    tolerance.blue = 1;
+                    tolerance.alpha = 1;
+                    tolerance.minBrightness = 1;
+                    tolerance.maxBrightness = 254;
+
+                    ignoreAntialiasing = false;
+                    ignoreColors = false;
+
+                    if (hasMethod) {
+                        param();
+                    }
+                    return self;
+                },
                 ignoreAntialiasing: function () {
                     tolerance.red = 32;
                     tolerance.green = 32;
@@ -997,6 +1013,9 @@ var isNode = function () {
                 break;
             case "less":
                 api.ignoreLess();
+                break;
+            case "lessless":
+                api.ignoreLessLess();
                 break;
             case "antialiasing":
                 api.ignoreAntialiasing();
